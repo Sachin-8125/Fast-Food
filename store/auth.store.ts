@@ -31,12 +31,7 @@ const useAuthStore = create<AuthState>((set) => ({
 
             if(user) set({
                 isAuthenticated: true,
-                user: {
-                    id: user.$id,
-                    email: user.email,
-                    name: user.name,
-                    ...user
-                }
+                user: user as unknown as User
             })
             else set( { isAuthenticated: false, user: null } );
         } catch (e) {
