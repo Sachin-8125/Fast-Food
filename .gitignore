@@ -45,3 +45,4 @@ assets/
 .vscode/
 .claude/
 
+.env
